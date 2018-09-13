@@ -2,8 +2,8 @@
 PRACTICE Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Elijah Williams.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -27,7 +27,7 @@ Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
 
 import testing_helper
 import time
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -135,6 +135,16 @@ def run_test_problem1a():
     actual = problem1a(30, 100)
     print_actual_result_of_test(expected, actual, test_results)
 
+    expected = -1.601  # This is APPROXIMATELY the correct answer.
+    print_expected_result_of_test([3, 5], expected, test_results, format_string)
+    actual = problem1a(3, 5)
+    print_actual_result_of_test(expected, actual, test_results)
+
+    expected = -1.601  # This is APPROXIMATELY the correct answer.
+    print_expected_result_of_test([3, 5], expected, test_results, format_string)
+    actual = problem1a(3, 5)
+    print_actual_result_of_test(expected, actual, test_results)
+
     # ------------------------------------------------------------------
     # TO DO: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
@@ -172,7 +182,10 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
-
+    total = 0
+    for k in range(n**2):
+        total = total + math.sin((k-m**2))
+        return total
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
