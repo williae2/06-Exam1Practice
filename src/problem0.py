@@ -234,7 +234,7 @@ def problem0b(n):
            since there are 46 primes between 2 and 200.
      """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -315,6 +315,7 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
     for k in range(n + 1):
+
         circle.attach_to(window)
         window.render(.5)
     window.close_on_mouse_click()
