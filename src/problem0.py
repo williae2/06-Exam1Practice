@@ -243,9 +243,11 @@ def problem0b(n):
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-    if is_prime(n) == True:
-        return 1
-    if is_prime(n) == False:
+    count = 0
+    for k in range(n-1):
+        if is_prime(k+2):
+            count = count + 1
+    return count
 
 def run_test_problem0c():
     """ Tests the   problem0c  function. """
@@ -313,9 +315,6 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
     for k in range(n + 1):
-        center_point = rg.Point(200, 200)
-        radius = 10
-        circle = rg.Circle(center_point, radius)
         circle.attach_to(window)
         window.render(.5)
     window.close_on_mouse_click()
