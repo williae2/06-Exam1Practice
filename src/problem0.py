@@ -315,8 +315,7 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
     for k in range(n + 1):
-
-        circle.attach_to(window)
+                circle.attach_to(window)
         window.render(.5)
     window.close_on_mouse_click()
 
