@@ -314,10 +314,13 @@ def problem0c(circle, n, window):
     #   renders with a half-second pause after rendering.
     ####################################################################
     # ------------------------------------------------------------------
-    for k in range(n + 1):
+
+    for k in range(n):
         circle.attach_to(window)
+        circle.center.x = circle.center.x + 2*circle.radius
+        circle = rg.Circle(circle.center, circle.radius)
         window.render(.5)
-    window.close_on_mouse_click()
+
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
