@@ -306,7 +306,7 @@ def problem0c(circle, n, window):
       :type window: rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -315,7 +315,7 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
     for k in range(n + 1):
-                circle.attach_to(window)
+        circle.attach_to(window)
         window.render(.5)
     window.close_on_mouse_click()
 
